@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Эта функция загружает на страницу новый скрипт. Когда в тело документа добавится конструкция <script src="…">, браузер загрузит скрипт и выполнит его.
+    function loadScript(src) {
+        let script = document.createElement('script');
+        script.src = src;
+        document.head.append(script);
+    }
+    loadScript('test.js');
+    console.log('first');
+
+</script>
+hi
+
+</body>
+</html>
