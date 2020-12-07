@@ -1,0 +1,63 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <h2>{{ title }}</h2>
+    <button @click="title = 'Changed title'">Change</button>
+    <button @click="doDestroy">destroy</button>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            title: 'Hello I am Vue!',
+        },
+        methods: {
+            doDestroy: function () {
+                this.$destroy()
+            }
+        },
+        beforeCreate: function () {
+            console.log('Before create');
+        },
+        // Приложение было создано
+        created: function () {
+            console.log('created');
+        },
+        // приложение готовится вставить скомпелированный шаблон в дом дерево
+        beforeMount: function () {
+            console.log('before mount');
+        },
+        //после того как вставил, говорит что вставлено
+        mounted: function () {
+            console.log('mounted')
+        },
+        // цикличные методы которые вызывются перед тем как что то изменилось и что то уже изменилось
+        // вью говорит что сейчас будет обновляться но при этом еще не изменился
+        beforeUpdate: function () {
+            console.log('before Updated')
+        },
+        // ИЗМЕНЕНИЯ ВСЕ ЗАКОНЧЕНЫ, шаблон перерисован
+        updated: function () {
+            console.log('updated')
+        },
+        beforeDestroy: function () {
+            console.log('beforeDestroy')
+        },
+        destroyed: function () {
+            console.log('destroyed');
+        }
+    })
+</script>
+</body>
+</html>

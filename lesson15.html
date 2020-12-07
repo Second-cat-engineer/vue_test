@@ -42,6 +42,11 @@
                 console.log('result')
                 return this.condition = this.counter >= 3 ? 'More than 3' : 'Less than 3'
             }
+        },
+        watch: {
+            counter: function (val) {
+                console.log('from watch object - ', val);
+            }
         }
     })
 </script>

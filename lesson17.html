@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <h2>{{ title }}</h2>
+    <h3>{{ newField }}</h3>
+    <button @click="title = 'Update title'">Update title</button>
+</div>
+<hr>
+<div id="app2">
+    <h2>{{ title }}</h2>
+    <button @click="updateFirstTitle">update</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    var vue1 = new Vue({
+        el: '#app',
+        data: {
+            title: 'Hello I am Vue!',
+        },
+        methods: {
+            alertFast: function () {
+                alert('I am from 1');
+            }
+        }
+    })
+
+    // почему это сработало? потому что объект экземпляра вью имеет в себе определенные поля. и если мы
+    // задаем поле то он облагает его различными сеттерами и геттерами и мы в последствии можем с ним работать как
+    // и с обычными полями.
+    vue1.newField = 'Random text';
+
+    // можно создать несколько вью приложений и они будут определятьс по id
+    // как взаимодействовать между ними?
+    new Vue({
+        el: '#app2',
+        data: {
+            title: 'hello 2',
+        },
+        methods: {
+            updateFirstTitle: function () {
+                vue1.title = 'Updated from second app';
+                vue1.newField = 'new newField';
+
+                setTimeout(function () {
+                    vue1.alertFast();
+                }, 2000)
+            }
+        }
+    })
+</script>
+</body>
+</html>

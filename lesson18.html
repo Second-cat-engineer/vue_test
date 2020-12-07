@@ -1,0 +1,58 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <h2 ref="heading">{{ title }}</h2>
+    <button @click="updateFirstTitle()">Update title</button>
+    <hr ref="horLine">
+</div>
+
+<div id="template">
+    <h2>{{ title }}</h2>
+</div>
+<div id="vue3"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    var vue1 = new Vue({
+        el: '#app',
+        data: {
+            title: 'Hello I am Vue!',
+        },
+        methods: {
+            updateFirstTitle() {
+                this.title = 'New title';
+                // все что во вью начинается на $ это системные имена, которые являются стандартными для приложения
+                console.log(this.$refs.heading)
+                this.$refs.heading.style.color = 'red';
+                console.log(this.$refs.horLine);
+                this.$refs.horLine.style.color = 'yellow';
+            }
+        }
+    })
+
+    var vue2 = new Vue({
+        data: {
+            title: 'Hello I am Vue',
+        },
+    })
+    vue2.$mount('#template')
+
+    var vue3 = new Vue({
+        data: {
+            title: 'Hello I am Vue 3',
+        },
+        template: '<div><h1>{{ title }}</h1><p>par</p></div>',
+    })
+    vue3.$mount('#vue3')
+
+</script>
+</body>
+</html>
