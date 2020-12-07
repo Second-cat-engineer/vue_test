@@ -2,56 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Vue</title>
+    <title>Title</title>
 </head>
-<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-<!-- <script src="vue.js"></script> -->
-<!-- <script src="js.js"></script> -->
 <body>
-    <div id="app">
-        {{ message }}
-    </div>
-    <div id="app-2">
-        <span v-bind:title="message">
-        Наведи на меня курсор на пару секунд,
-        чтобы увидеть динамически связанное значение title!
-        </span>
-    </div>
-    <div id="app-3">
-        <span v-if="seen">Сейчас меня видно</span>
-        sad
-    </div>
-    <div id="app-4">
-        <ol>
-            <li v-for="todo in todos">
-                {{ todo.text }}
-            </li>
-        </ol>
-    </div>
-    <div id="app-5">
-        <p>{{ message }}</p>
-        <button v-on:click="reverseMessage">Перевернуть сообщение</button>
-    </div>
 
-    <div id="app-6">
-        <p>{{ message }}</p>
-        <input v-model="message">
-    </div>
+<div id="app">
+    <input type="text" v-on:input="changeName">
+    <h1>hi, {{ name }}</h1>
+</div>
 
-    <div id="saf">
-        <span v-on:click="message='title'">Title</span>
-        <span @click="message='this is new title'">Title</span>
-        <span @mouseover="message='this is new title'">Title</span>
-        <span @mouseover="changeText">change text</span>
-        <p>{{ message }}</p>
-        <p :class="styleCSS"> color: {{ styleCSS }}</p>
-        <input type="text" v-on:input="styleCSS = $event.target.value">
-    </div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            name: 'Vue!',
+        },
+        methods: {
+            changeName: function (event) {
+                this.name = event.target.value;
+            }
+        }
 
-
-
-
-
-    <script src="js.js"></script>
+    })
+</script>
 </body>
 </html>

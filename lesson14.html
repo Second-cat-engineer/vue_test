@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <ul>
+        <li v-for="car in cars">
+            {{ car }}
+        </li>
+        <!-- для того чтобы посчитать количесвто элементов в массиве -->
+        <li v-for="(car, index) in cars">
+            {{ index + 1 }} . {{ car }}
+        </li>
+    </ul>
+    <br>
+
+    <ul>
+        <li v-for="(user, index) in users">
+            {{ index + 1 }} . {{ user.name }} - <b>{{ user.age }}</b>
+        </li>
+    </ul>
+    <br>
+
+    <ul>
+        <li v-for="(user, index) of users">
+            {{ index + 1 }} . {{ user.name }} - <b>{{ user.age }}</b>
+        </li>
+    </ul>
+    <br>
+
+    <ol>
+        <li v-for="num of 4">{{ num }}</li>
+    </ol>
+    <br>
+
+    <ul>
+        <li v-for="(value, key, index) in person"> <em>{{ index +1}}</em> {{ key }} - {{ value }}</li>
+    </ul>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            cars: [
+                'kia',
+                'audi',
+                'lada',
+                'toyota'
+            ],
+            users: [
+                {name: 'asd', age: 42},
+                {name: 'qwe', age: 32},
+                {name: 'qwert', age: 22},
+            ],
+            person: {
+                name: 'aside',
+                age: 42,
+                job: 'engineer',
+            }
+        }
+    })
+</script>
+</body>
+</html>

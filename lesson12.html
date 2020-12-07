@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <h2 v-if="isVisible"> I am visible! </h2>
+    <!-- <h2 v-if="!isVisible"> No, I am not! </h2>
+    а можно написать вот так -->
+    <h2 v-else> No, I am not! </h2>
+    <button @click="isVisible = !isVisible">Toggle</button>
+    <br>
+
+    <h2 v-if="type === 'a'"> A </h2>
+    <h2 v-else-if="type === 'b'"> B </h2>
+    <h2 v-else-if="type === 'c'"> C </h2>
+    <h2 v-else> not match </h2>
+    <input type="text" v-model="type">
+    <br>
+
+    <template v-if="isVis">
+        <h2>I am title</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+    </template>
+
+    <template v-else>
+        <h2 style="color: red">I am title</h2>
+        <p style="color: blue">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+    </template>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            isVisible: false,
+            type: 'a',
+            isVis: false,
+        },
+    })
+</script>
+</body>
+</html>

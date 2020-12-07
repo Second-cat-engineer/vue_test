@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <h1>hi, {{ name }} , {{ number }}</h1>
+    <!-- внутри {{ }} можно писать простые выражения, и оно сразу будет компилироваться -->
+    <h1>Sum: {{32 > 10 }}, {{ number }}</h1>
+    <p> metgod: {{ sayHi() }}</p>
+    <p>If statement: {{ isOk ? 'I am OK' : 'I am not OK' }}</p>
+    <p> Functions: {{ string.split('').reverse().join('') }}</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            name: 'Vue!',
+            // можно вводить различные поля которые определили непосредственно во Vue объекте
+            number: 42,
+            isOk: undefined,
+            string: 'am safuan',
+        },
+        methods: {
+            // для того чтобы не было ошибки при выполнении функции или любого другого выражения,
+            // должен выдавать объект которую можно привести к строке
+            sayHi: function () {
+                return 'I\'m machine';
+            }
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <h2>
+        <!-- когда описываем атрибуты, то не можем использовать скобки в таком формате
+        <a href="{{ url }}">gogle</a>
+        для этого необходимо воспользоватсья дериктивами v-bind -->
+        <a v-bind:href="url">gogle</a>
+    </h2>
+    <p>{{ link }}</p> <!-- в браузере будет выведен текст <a href="http://google.com">Google</a> -->
+    <!--  для того чтобы все вывелось номально необходимо воспользоваться дериктивой v-html
+     и вью сам скомпилирует код. данная дериктива служит для вывода готового хтмл-->
+    <p v-html="link"></p>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            url: 'http://google.com',
+            // для вывода html тег в шаблон
+            link: '<a href="http://google.com">Google</a>',
+        },
+    })
+
+
+
+</script>
+</body>
+</html>

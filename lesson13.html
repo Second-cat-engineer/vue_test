@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <h1 v-if="isVisible"> I am visible! </h1>
+    <h2 v-else> No, I am not! </h2>
+    <!--
+    v-if директива работает таким образом что она полностью стирает из DOM дерева те элементы, которые она не может сейчас показать
+    есть друга деректива которая работает похожим образом v-show, она только скрывает
+    -->
+    <h1 v-show="isVisible"> I am visible! </h1>
+    <h2 v-show="!isVisible"> No, I am not! </h2>
+    <button @click="isVisible = !isVisible">Toggle</button>
+    <br>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            isVisible: false,
+        },
+    })
+</script>
+</body>
+</html>

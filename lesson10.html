@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 1px solid black;
+            display: inline-block;
+            margin: 40px;
+        }
+
+        .red { background: red; }
+        .blue { background: blue; }
+        .green { background: green; }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <div class="circle" @click="isActive = !isActive" v-bind:class="{'red': isActive, 'green': !isActive}"></div>
+    <hr>
+    <div class="circle" @click="isActive = !isActive" v-bind:class="getCssClasses"></div>
+
+    <hr>
+    <div class="circle" :class="[color, {'red': isActive}]"></div>
+    <hr>
+    <input type="text" v-model="color">
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            isActive: false,
+            color: 'blue',
+        },
+        /*
+        methods: {
+            getCssClasses: function () {
+                return {
+                    'red': this.isActive,
+                    'green': !this.isActive,
+                }
+            }
+        },
+        */
+        // если все указать в этом методе, то не нужно вызывать функцию (), а вызывается как переменная
+        computed: {
+            getCssClasses: function () {
+                return {
+                    'red': this.isActive,
+                    'green': !this.isActive,
+                }
+            }
+        }
+
+    })
+</script>
+</body>
+</html>

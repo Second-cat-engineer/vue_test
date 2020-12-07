@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <h2>
+        <!-- <a v-bind:href="url">google</a> -->
+        <!-- если такая запись, то это значит что мы используем конструкцию v-bind -->
+        <a :href="url">google</a>
+    </h2>
+
+    <h2>
+        Счетчик = {{ counter }}
+    </h2>
+    <!-- чтобы использовать событие -on можно использовать @ только без :   -->
+    <button v-on:click="counter++"> Увеличить </button>
+    <button @click="counter++"> Увеличить </button>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            url: 'http://google.com',
+            counter: 0,
+        },
+    })
+
+
+
+</script>
+</body>
+</html>
