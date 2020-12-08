@@ -5,6 +5,76 @@
     <title>Title</title>
 </head>
 <body>
+<div id="app">
+    <div style="border: 1px solid black; padding: 10px">
+        <h2>counter: {{ counter }}</h2>
+        <button @click="counter++">add</button>
+    </div>
 
+    <div style="border: 1px solid black; padding: 10px">
+        <h2>counter: {{ counter2 }}</h2>
+        <button @click="counter2++">add</button>
+    </div>
+</div>
+
+<div id="app2">
+    <my-counter></my-counter>
+    <my-counter></my-counter>
+    <my-counter v-for="c in 10"></my-counter>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            counter: 0,
+            counter2: 0,
+        }
+
+    })
+
+
+    var dataObj = {
+        counter: 0
+    }
+    // первый параметр - строка (селектор - должны описать строку, по которому можно создать компонент
+    // и проинициализировать его) по другому говоря указать тег, который мы будем использовать
+    // второй параметр - объект конфигурации (главное свойство поле template)
+    // обратить внимание что компонент зарегестрирован ДО проинициализации приложение.
+    Vue.component('my-counter', {
+        template: `
+            <div style="border: 1px solid black; padding: 10px">
+                <h2>counter: {{ counter }}</h2>
+                <button @click="add">add count</button>
+            </div>
+        `,
+        // почему мы должны использовать функцию, которая возвращает объект, а не просто объект?
+        // потому что он содержит изолированные данные, которые нужны для нашего компонента
+        // у каждого компонента будет существовать свой counter, первый не затрагивает другие
+        data: function() {
+            return {
+                counter: 0,
+            }
+            // либо можно вынести в отдельную переменную, однако теперь будет увеличиваться во всех
+            // почему так происходит? потому что когда мы возвращаем какую то переменную, то мы возвращаем ссылку на
+            // на данный объект, и соответственно все компоненты смотрят на него
+            // если бы data возвращал просто объект то компоненты не смогли бы работать изолированно, поэтому нам нужно
+            // писать функцию и возвращать какой то новый объект
+            // return dataObj;
+        },
+        methods: {
+            add: function () {
+                this.counter++
+            }
+        }
+    })
+
+    new Vue({
+        el: '#app2',
+    })
+
+    //компоненты это некоторые переиспользуемые элементы сайтак, которые работают независимо друг от друга
+</script>
 </body>
 </html>

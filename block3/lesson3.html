@@ -1,10 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+
+<div id="app">
+    <my-counter v-for="c in 2"></my-counter>
+</div>
+<hr>
+<div id="app2">
+    <my-counter></my-counter>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+
+    // глобально обратились к переменной Vue и глобально зарегестрировали компонент глобально, он доступен в любых приложениях
+    // но что если мы хотим использовать компонент только в одном приложении, а в другом хотим использовать то же самый селектор
+    // но уже для другого компонента? для этого можем регестрировать компоненты локально для каждого приложения. для этого
+    // в переменную
+    // было var component = Vue.component('my-counter', {
+    var component = {
+        template: `
+            <div style="border: 1px solid black; padding: 10px">
+                <h2>counter: {{ counter }}</h2>
+                <button @click="add">add count</button>
+            </div>
+        `,
+        data: function() {
+            return {
+                counter: 0,
+            }
+        },
+        methods: {
+            add: function () {
+                this.counter++
+            }
+        }
+    }
+
+    new Vue({
+        el: '#app',
+        // тут компоненты
+        components: {
+            'my-counter': component,
+        }
+    })
+
+    new Vue({
+        el: '#app2',
+        components: {
+            // то же самое что и 'my-counter': component,
+            myCounter: component,
+        }
+    })
+
+</script>
 </body>
 </html>

@@ -1,12 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="71d956f9-1d3d-486a-b949-bb9b133125c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lesson17.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson18.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson20.html" afterDir="false" />
+    <list default="true" id="c82b3aae-97be-4ae0-adaa-9a95f306f800" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/block2/src/Car.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/block2/src/Counter.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/block2/src/exportHTML.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/block3/lesson1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/block3/lesson3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/block5/src/color.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson15.html" beforeDir="false" afterPath="$PROJECT_DIR$/lesson15.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/block1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson10.html" beforeDir="false" afterPath="$PROJECT_DIR$/block1/lesson10.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson11.html" beforeDir="false" afterPath="$PROJECT_DIR$/block1/lesson11.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson12.html" beforeDir="false" afterPath="$PROJECT_DIR$/block1/lesson12.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson13.html" beforeDir="false" afterPath="$PROJECT_DIR$/block1/lesson13.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson14.html" beforeDir="false" afterPath="$PROJECT_DIR$/block1/lesson14.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson15.html" beforeDir="false" afterPath="$PROJECT_DIR$/block1/lesson15.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson17.html" beforeDir="false" afterPath="$PROJECT_DIR$/block1/lesson17.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson18.html" beforeDir="false" afterPath="$PROJECT_DIR$/block1/lesson18.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson2.html" beforeDir="false" afterPath="$PROJECT_DIR$/block1/lesson2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson20.html" beforeDir="false" afterPath="$PROJECT_DIR$/block1/lesson20.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson3.html" beforeDir="false" afterPath="$PROJECT_DIR$/block1/lesson3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson4.html" beforeDir="false" afterPath="$PROJECT_DIR$/block1/lesson4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson5.html" beforeDir="false" afterPath="$PROJECT_DIR$/block1/lesson5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson6.html" beforeDir="false" afterPath="$PROJECT_DIR$/block1/lesson6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson8.html" beforeDir="false" afterPath="$PROJECT_DIR$/block1/lesson8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson9.html" beforeDir="false" afterPath="$PROJECT_DIR$/block1/lesson9.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +35,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="HTML File" />
       </list>
     </option>
@@ -23,7 +43,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1lL6ixuirOgOkQklVYMaSvKtrZY" />
+  <component name="ProjectId" id="1l8hqsgfZ9AK7ZK2GTeZaaS63RD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -35,20 +55,31 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../js" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/block1" />
+      <recent name="$PROJECT_DIR$/test" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="71d956f9-1d3d-486a-b949-bb9b133125c6" name="Default Changelist" comment="" />
-      <created>1607364154966</created>
+      <changelist id="c82b3aae-97be-4ae0-adaa-9a95f306f800" name="Default Changelist" comment="" />
+      <created>1606984819923</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1607364154966</updated>
-      <workItem from="1607364156583" duration="141000" />
-      <workItem from="1607364299435" duration="4127000" />
+      <updated>1606984819923</updated>
+      <workItem from="1606984821016" duration="13469000" />
     </task>
     <servers />
   </component>
