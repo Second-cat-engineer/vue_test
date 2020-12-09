@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c82b3aae-97be-4ae0-adaa-9a95f306f800" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/block10/src/Actions.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/block9/src/pages/Car.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/block9/src/pages/CarFull.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/block9/src/pages/Cars.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/block9/src/pages/Error.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/block9/src/pages/Home.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/block9/src/routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/block10/src/store/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/block8/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/block8/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/block8/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/block8/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/block10/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/block10/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/block10/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/block10/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/block10/src/Actions.vue" beforeDir="false" afterPath="$PROJECT_DIR$/block10/src/Actions.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/block10/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/block10/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/block10/src/Counter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/block10/src/Counter.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/block10/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/block10/src/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +20,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -68,7 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606984819923</updated>
       <workItem from="1606984821016" duration="13469000" />
-      <workItem from="1607497251315" duration="23706000" />
+      <workItem from="1607497251315" duration="26594000" />
     </task>
     <servers />
   </component>

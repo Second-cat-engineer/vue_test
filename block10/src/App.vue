@@ -1,7 +1,9 @@
 <template>
   <div class="container text-center pt-5">
-    <app-counter :counter="counter"></app-counter>
-    <app-actions @counterUpdated="counter += $event"></app-actions>
+<!--    <app-counter :counter="counter"></app-counter>-->
+    <app-counter></app-counter>
+<!--    <app-actions @counterUpdated="counter += $event"></app-actions>-->
+    <app-actions></app-actions>
   </div>
 </template>
 
