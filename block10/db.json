@@ -1,0 +1,39 @@
+{
+  "cars": [
+    {
+      "name": "mazda",
+      "year": 2019,
+      "id": 1
+    },
+    {
+      "name": "kia",
+      "year": 2019,
+      "id": 2
+    },
+    {
+      "name": "",
+      "year": 2019,
+      "id": 3
+    },
+    {
+      "name": "lada",
+      "year": 2019,
+      "id": 4
+    },
+    {
+      "name": "asd",
+      "year": 2021,
+      "id": 5
+    },
+    {
+      "name": "",
+      "year": 2019,
+      "id": 6
+    },
+    {
+      "name": "asd",
+      "year": 2019,
+      "id": 7
+    }
+  ]
+}

@@ -1,11 +1,13 @@
-// npm install vuex --save
-
 import Vue from 'vue'
+import VueResource from 'vue-resource'
 import App from './App.vue'
-import store from './store/index.js'
+
+Vue.use(VueResource)
+
+// Глобальная настройка
+//Vue.http.options.root = 'http://localhost:3000/'
 
 new Vue({
   el: '#app',
-  store: store,
   render: h => h(App)
 })
