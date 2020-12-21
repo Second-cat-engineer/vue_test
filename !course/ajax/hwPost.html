@@ -57,10 +57,17 @@
 
 </body>
 <script>
-    let form = document.forms['new-user-form'];
-    form.addEventListener('submit', () => {
-        console.log(form.elements);
-    })
+    const form = document.forms['new-user-form'];
+    const email = form.element['email']
+    console.log(document.forms['new-user-form']);
+
+    // let form = document.forms['new-user-form'];
+    // form.addEventListener('submit', () => {
+    //     const form = document.forms['new-user-form'];
+    //     const email = form.element['email']
+    //     console.log(document.forms['new-user-form']);
+    //     // console.log(form.elements);
+    // })
 
 </script>
 </html>

@@ -6,8 +6,8 @@ function MyHttp() {
                 const xhr = new XMLHttpRequest();
                 xhr.open('GET', url);
                 xhr.addEventListener('load', () => {
-                    if (Math.floor(xhr.status / 100) !== 2 ) {
-                        cb(`error. Status code: ${xhr.status}`, xhr);
+                    if (Math.floor(xhr.status / 100) !== 2) {
+                        cb(`Error. Status code: ${xhr.status}`, xhr);
                         return;
                     }
                     const response = JSON.parse(xhr.responseText);
@@ -64,17 +64,12 @@ const newsService = (function () {
 
     return {
         topHeadlines(country = 'ru', cb) {
-            http.get(
-                `${apiUrl}/top-headlines?country=${ country }&category=technology&apiKey=${ apiKey }`,
-                cb,
-            );
-
+            let url = `${apiUrl}/top-headlines?country=${ country }&category=technology&apiKey=${ apiKey }`;
+            http.get(url, cb);
         },
         everything(query, cb) {
-            http.get(
-                `${apiUrl}/everything?q=${query}&apiKey=${apiKey}`,
-                cb,
-            );
+            let url = `${apiUrl}/everything?q=${query}&apiKey=${apiKey}`;
+            http.get(url, cb);
         },
     }
 })();
