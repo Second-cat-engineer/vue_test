@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+test
+<script>
+    // function multiply() {
+    //     if (arguments.length === 0) {
+    //         return 0;
+    //     }
+    //
+    //     let sum = 1;
+    //     for (let i = 0; i < arguments.length; i++) {
+    //         console.log(arguments[i]);
+    //         sum *= +arguments[i]
+    //     }
+    //     return sum
+    // }
+    //
+    // let res1 = multiply(2, 4, 5, 6);
+    // let res2 = multiply();
+    // console.log(res2)
+
+
+    // function reverseString(str) {
+    //     return String(str).split('').reverse().join('');
+    // }
+    //
+    // reverseString('test');
+    // reverseString('');
+    // reverseString(null);
+    // reverseString(undefined);
+    // reverseString();
+
+
+    // function getCodeStringFromText(str) {
+    //     let str = String(str)
+    //     if(str.length === 0) {
+    //         return '';
+    //     }
+    //     let a = str.split('');
+    //     let sum = a[0].charCodeAt();
+    //     for (let i = 1; i < a.length; i++) {
+    //         sum = sum + ' ' + a[i].charCodeAt();
+    //     }
+    //     return sum;
+    // }
+    //
+    // let res = getCodeStringFromText("hello");
+    // console.log(res)
+
+    // function guessTheNumber(num) {
+    //     if (typeof(num) !== 'number') {
+    //         return new Error('Please provide a valid number');
+    //     } else if (num < 1 || num >= 10) {
+    //         return new Error('Please provide number in range 0-10')
+    //     }
+    //
+    //     let numRund = Math.ceil(Math.random()* 10)
+    //     if (numRund === num) {
+    //         return 'You win!'
+    //     }
+    // }
+    //
+    // guessTheNumber(5);
+
+
+    // function getArray(num) {
+    //     let arr = [];
+    //     for (let i = 1; i <= num; i++) {
+    //         arr.push(i);
+    //     }
+    //     return arr
+    // }
+    // getArray(10);
+
+    // function doubleArray(arr) {
+    //     return arr.concat(arr)
+    // }
+    // doubleArray([1,2,3]) // [1,2,3,1,2,3]
+
+    // function changeCollection() {
+    //     let arrg = [];
+    //     for (let i = 0; i < arguments.length; i++) {
+    //         if (!Array.isArray(arguments[i])) {
+    //             continue
+    //             //return new Error('argument is not array')
+    //         }
+    //         arguments[i].shift()
+    //         arrg.push(arguments[i])
+    //     }
+    //     return arrg
+    // }
+    // console.log(changeCollection([1, 2, 3], ['a', 'b', 'c', 'd']))
+
+
+    const users = [
+        {
+            "_id": "5e36b779dc76fe3db02adc32",
+            "balance": "$1,955.65",
+            "picture": "http://placehold.it/32x32",
+            "age": 33,
+            "name": "Berg Zimmerman",
+            "gender": "male"
+        },
+        {
+            "_id": "5e36b779d117774176f90e0b",
+            "balance": "$3,776.14",
+            "picture": "http://placehold.it/32x32",
+            "age": 37,
+            "name": "Deann Winters",
+            "gender": "female"
+        },
+        {
+            "_id": "5e36b779daf6e455ec54cf45",
+            "balance": "$3,424.84",
+            "picture": "http://placehold.it/32x32",
+            "age": 36,
+            "name": "Kari Waters",
+            "gender": "female"
+        }
+    ]
+
+
+    // function filterUsers(arr, key, value) {
+    //     if (!arr || !Array.isArray(arr) || !key || !value) {
+    //         return new Error('Error message')
+    //     }
+    //     let res = [];
+    //     for (let i = 0; i < arr.length; i++) {
+    //         let user = arr[i];
+    //         for (let prop in user) {
+    //             if ( prop === key) {
+    //                  if (user[prop] === value) {
+    //                      res.push(user);
+    //                  }
+    //             }
+    //         }
+    //     }
+    //     return res;
+    // }
+    //
+    // console.log(filterUsers(users, "gender", 'female'))
+
+    function filterUsers(arr, key, value) {
+        if (!Array.isArray(arr)) return new Error('The first argument should be an array');
+        if (typeof key !== "string" || key === '') return new Error('The key should be a valid string');
+        if (value === undefined || value === null) return new Error('The value should be a valid value.');
+
+        const res = [];
+
+        for (i = 0; i < arr.length; i++) {
+            if (arr[i][key] === value) {
+                res.push(arr[i])
+            }
+        }
+
+        return res;
+    }
+    console.log(filterUsers(users, "age", 36))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

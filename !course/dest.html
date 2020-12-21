@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+// let users = ['safun', 'ais', 'ilda', 'gaziz'];
+//
+// let names = ['ivan', 'ais', 'anna'];
+//
+// const newArr = [...users, ...names];
+// console.log(newArr)
+//
+//
+// let us = {
+// name: 'saf',
+// age: 42
+// }
+// let us2 = {
+// name: 'saf',
+// age: 23,
+// }
+//
+// const newUse = {...us, ...us2 };
+// console.log(newUse)
+
+
+function destruc(first, ...args) {
+    return {
+        first,
+        args
+    }
+}
+//console.log(destruc(1, 2, 3, 'asdf'))
+
+
+
+
+
+const organisation = {
+    name: 'Google',
+    info: {
+        employees: ['Vlad', 'Olga'],
+        partners: ['Microsoft', 'Facebook', 'Xing']
+    }
+}
+
+function getInfo({
+    name = 'Unknown',
+    info: {
+        employees: [first, second, ...others] = [],
+        partners: [firstPart, secondPart, ...otherPart] = [],
+    } ={}
+                 } = {}) {
+    console.log(name)
+    console.log(firstPart, secondPart)
+}
+//getInfo(organisation)
+
+
+
+
+let user = {
+    "guid": "dd969d30-841d-436e-9550-3b0c649e4d34",
+    "isActive": false,
+    "balance": "$2,474.46",
+    "age": 30,
+    "eyeColor": "blue",
+    "name": "Tameka Maxwell",
+    "gender": "female",
+    "company": "ENOMEN",
+    "email": "tamekamaxwell@enomen.com",
+    "phone": "+1 (902) 557-3898",
+    "tags": [
+        "aliquip",
+        "anim",
+        "exercitation",
+        "non",
+    ],
+    "friends": [
+        {
+            "id": 0,
+            "name": "Barber Hicks"
+        },
+        {
+            "id": 1,
+            "name": "Santana Cruz"
+        },
+        {
+            "id": 2,
+            "name": "Leola Cabrera"
+        }
+    ],
+};
+
+const {
+    name,
+    balance,
+    email,
+    tags:
+        [first, , , last],
+    friends:
+        [
+            { name: nameFriend }
+        ]
+} = user
+// console.log(name, balance, email);
+// console.log(first, last)
+// console.log(nameFriend)
+
+
+//console.log({ tags: [one, ...others] } = user)
+
+
+const newArr = [...user.tags, ...user.friends]
+console.log(newArr)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

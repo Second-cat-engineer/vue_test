@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+
+
+let restangle = {
+    width: 100,
+    height: 20,
+    getSquare: function () {
+        return this.width * this.height;
+    }
+}
+
+let price = {
+    price: 10,
+    discount: '15%',
+    getPrice: function () {
+        return this.price;
+    },
+    getPriceWithDiscount: function () {
+        let disc = parseInt(this.discount) * this.price / 100;
+        return this.price - disc;
+    }
+}
+console.log(price.getPriceWithDiscount())
+
+let obj3 = {
+    height: 100,
+    addHeight: function () {
+        return this.height += 1;
+    }
+}
+console.log(obj3.addHeight())
+console.log(obj3.height)
+
+let numerator = {
+    value: 1,
+    double: function () {
+        this.value *= 2;
+        return this;
+    },
+    plusOne: function () {
+        this.value += 1;
+        return this;
+    },
+    minusOne () {
+        this.value -= 1;
+        return this;
+    }
+}
+numerator.double().plusOne().plusOne().minusOne();
+console.log(numerator.value)
+
+
+let obj4 = {
+    price: 10,
+    count: 5,
+    sum () {
+        return this.count * this.price;
+    }
+}
+
+let obj5 = {
+    price: 10,
+    count: 4,
+}
+let res = obj4.sum.call(obj5);
+console.log(res)
+
+let sizes = {
+    width: 5,
+    height: 10
+},
+
+getSquare = function () {
+    return this.width * this.height
+};
+let res2 = getSquare.call(sizes)
+console.log(res2)
+
+
+
+let element = {
+    height: 25,
+    getHeight: function () {
+        return this.height;
+    }
+};
+let getElementHeight = element.getHeight.bind(element);
+console.log(getElementHeight())
+ // undefined
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

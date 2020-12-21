@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+// При обычном использованиее
+// let names = ['safuan', 'ais', 'ilda', 'gaziz'];
+// let newArr = [];
+// for (let i = 0; i < names.length; i++) {
+//     newArr.push(names[i].length);
+// }
+// console.log(newArr)
+//
+// let newArr2 = [];
+// for (let i = 0; i < names.length; i++) {
+//     newArr2.push(names[i].toUpperCase());
+// }
+// console.log(newArr2)
+
+
+// Использование callback
+// let names = ['safuan', 'ais', 'ilda', 'gaziz'];
+// function mapArray(arr, fn) {
+//     const res = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         res.push(fn(arr[i]))
+//     }
+//     return res;
+// }
+// function nameLength(el) {
+//     console.log(el.length)
+//     return el.length;
+// }
+// function nameToUpperCase(el) {
+//     console.log(el.toUpperCase())
+//     return el.toUpperCase();
+// }
+// mapArray(names, nameLength);
+// mapArray(names, nameToUpperCase)
+
+// function greeting(firstName) {
+//     return function (lastName) {
+//         return `hello, ${firstName} ${lastName}`;
+//     }
+// }
+// let a = greeting('saf');
+// let b = a('yay');
+// console.log(b)
+//
+// let c = greeting('ais')('bird');
+// console.log(c)
+//
+//
+//
+// // как можно упростить этот код?
+// function question(job) {
+//     if (job === 'dev') {
+//         return function (name) {
+//             return `${name}, js?`;
+//         };
+//     } else if (job === 'teacher') {
+//         return function (name) {
+//             return`${name}, which?`;
+//         };
+//     }
+// }
+// const dev = question('dev')('saf');
+// console.log(dev)
+//
+// const tech = question('teacher')('saf');
+// console.log(tech)
+//
+//
+// // вот так
+// function questions(job) {
+//     const jobDictionary = {
+//         dev: 'js',
+//         teacher: 'which',
+//     };
+//
+//     return function (name) {
+//         return`${name}, ${jobDictionary[job]}?`;
+//     };
+// }
+// const techer = questions('teacher')('saf');
+// console.log(techer)
+
+
+
+
+
+/*// 1
+function firstFunc(arr, fn) {
+    let res = ''
+    for (let i = 0; i < arr.length; i++) {
+        res += (fn(arr[i]))
+    }
+    return `New value: ${res}`;
+}
+
+function handler1(el) {
+    return el[0].toUpperCase() + el.slice(1);
+}
+//console.log(firstFunc(['my', 'name', 'is', 'Trinity'], handler1));
+
+function handler2(el) {
+    return ' ' + el * 10 + ',';
+}
+//console.log(firstFunc([10, 20, 30], handler2) )
+
+function handler3(el) {
+    console.log(el);
+    console.log(' ' +el.name + ' is ' + el.age + ',')
+    return ' ' +el.name + ' is ' + el.age + ',';
+}
+//console.log(firstFunc([{age: 45, name: 'Jhon'}, {age: 20, name: 'Aaron'}], handler3));
+
+function handler4(el) {
+    console.log(el.split('').reverse().join(''))
+    return el.split('').reverse().join('') + ', ';
+}
+console.log(firstFunc(['abs', '123'], handler4));*/
+
+
+function every(arr, fn) {
+    if (!Array.isArray(arr)) {
+        return new Error('is not array');
+    }
+    if (!fn || typeof fn !== 'function') {
+        return new Error('is not function')
+    }
+
+    for (let i = 0; i < arr.length; i++) {
+        if (!fn(arr[i]), i, arr) {
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log(every([6,2], function (el) {
+    return typeof el === 'number';
+}))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

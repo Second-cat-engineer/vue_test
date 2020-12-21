@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+function getFullName(firstName, lastName) {
+    return function () {
+        return `${firstName} ${lastName}`;
+    }
+}
+const getName = getFullName('asd', 'aasdf');
+// console.log(getName())
+
+
+function updateValue(val) {
+    let x = val;
+    return function (num = 0) {
+        return (x += num);
+    };
+}
+const updateVal1 = updateValue(2);
+// console.log(updateVal1(1));
+// console.log(updateVal1(1));
+
+const updateVal2 = updateValue(3);
+// console.log(updateVal2(1))
+// console.log(updateVal2(5))
+
+
+
+function checkCred() {
+    const login = 'test';
+    const password = 'somePass';
+
+    return {
+        checkLogin(value) {
+            return login === value;
+        },
+        checkPassword(value) {
+            return password === value;
+        },
+    };
+}
+const check = checkCred();
+// console.log(check);
+// console.log(check.checkLogin('test'))
+
+
+
+function closureExample() {
+    const arrOfFunc = [];
+    let value = '';
+
+    for (let i =0; i < 10; i++) {
+        value +=i;
+        console.log(value, i)
+        arrOfFunc.push(function (){
+            console.log(value, i);
+        });
+    }
+    return arrOfFunc;
+}
+
+// const res = closureExample();
+// res[0](); // 0123456789 0
+// res[5](); // 0123456789 0
+
+
+
+function minus(num1) {
+    return function (num2) {
+        return num1 - num2;
+    }
+}
+// console.log(minus(10)(6))
+// console.log(minus(5)(6))
+
+
+function multiplyMaker(val) {
+    let x = val;
+    return function (num2) {
+        return x *= num2;
+    }
+}
+const multiply = multiplyMaker(2);
+// console.log(multiply(2))
+// console.log(multiply(1))
+// console.log(multiply(3))
+// console.log(multiply(10))
+
+
+const strModule = (function () {
+    let x;
+
+    function setString(val = '') {
+        x = String(val);
+    }
+
+    function getString() {
+        return x;
+    }
+    function getLengthString() {
+        return x.length;
+    }
+    function getReverseString() {
+        return x.split('').reverse().join('');
+    }
+
+    return {
+        setString,
+        getString,
+        getLengthString,
+        getReverseString,
+    }
+
+}())
+// const asd = strModule;
+// console.log(asd.setString('asdad'));
+// console.log(asd.getString());
+// console.log(asd.getLengthString());
+// console.log(asd.getReverseString());
+
+
+// const strModule = (function (){
+//     let str = '';
+//
+//     function setStr(val = '') {
+//         str = String(val);
+//     }
+//
+//     function getStr() {
+//         return str;
+//     }
+//
+//     function getStrLength() {
+//         return str.length;
+//     }
+//
+//     function getReverseStr() {
+//         return str.split('').reverse().join('');
+//     }
+//
+//     return {
+//         setStr,
+//         getStr,
+//         getStrLength,
+//         getReverseStr
+//     }
+// }());
+
+
+
+
+let calculation = (function (){
+    let res;
+    function setValue(val) {
+        res = val;
+        return this;
+    }
+    function plusValue(val) {
+        res += val;
+        return this;
+    }
+    function minusValue(val) {
+        res -= val;
+        return this;
+    }
+    function sqrtValue(val) {
+        res = Math.pow(res, val);
+        return this;
+    }
+    function calcValue(val) {
+        res *= val;
+        return this;
+    }
+    function getValue() {
+        return res;
+    }
+
+    return {
+        setValue,
+        plusValue,
+        minusValue,
+        sqrtValue,
+        calcValue,
+        getValue,
+    }
+}())
+
+console.log(calculation.setValue(10).plusValue(10).getValue())
+console.log(calculation.setValue(10).sqrtValue(2).getValue())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
