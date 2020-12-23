@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+hi
+<script>
+
+function User1(name) {
+    let userName = name;
+
+    return {
+        getName() {
+            return userName;
+        },
+        setName(name) {
+            userName = name;
+        }
+    }
+}
+//const test1 = new User1('test1');
+// Проблема в том что можно переопределить методы
+// например: test1.getName = 'asdf';
+
+// чтобы такого не было:
+function User2(name) {
+    let userName = name;
+
+    return Object.freeze({
+        getName() {
+            return userName;
+        },
+        setName(name) {
+            userName = name;
+        }
+    });
+}
+//const test2 = new User2('test2');
+
+// с помощью символов
+function User3(name) {
+    const symbol = Symbol();
+
+    return {
+        [symbol]: name,
+        getName() {
+            return this[symbol];
+        },
+        setName(name) {
+            this[symbol] = name;
+        }
+    }
+}
+const test3 = new User3('test3');
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

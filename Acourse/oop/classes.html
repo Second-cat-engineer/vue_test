@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+hi
+
+<script>
+
+class ProductES6 {
+    constructor(brand, price, discount) {
+        this._brand = brand;
+        this.price = price;
+        this.discount = discount;
+    }
+    get brand() {
+        return this._brand;
+    }
+    set brand(name) {
+        this._brand = name;
+    }
+
+    // Эти методы автоматически попадут в прототип созданного объекта
+    getPriceWithDiscount () {
+        return (this.price * (100 - this.discount) / 100);
+    }
+    setPrice (newPrice) {
+        this.price = newPrice;
+    }
+
+    // Статические методы. не связаны с объектом. нет this. ProductES6.plus(3,3)
+    static plus(x, y) {
+        return x + y;
+    }
+}
+
+const newProduct = new ProductES6('asd', 200, 20);
+// console.log(newProduct);
+// console.log(ProductES6.plus(3,3));
+
+
+// Наследование
+class Admin {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    getFullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+class AdminModule extends Admin {
+    constructor(firstName, lastName, moduleName) {
+        super(firstName, lastName);
+        this.moduleName = moduleName;
+    }
+    getFullName() {
+        //console.log(super.getFullName());
+        //console.log('Этот метот перезатерет метод родителя');
+        const parentRes = super.getFullName();
+        return `${parentRes}, moduleName: ${this.moduleName}`;
+    }
+}
+const admin = new AdminModule('admin', 'admin', 'scheduling');
+console.log(admin);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

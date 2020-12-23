@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+//function Product(brand, price, discount) {
+//    // 1. Создается новый объект
+//    // 2. на этот объект устанавливается ссылка this
+//    // 3. возвращается этот объект
+//    this.brand = brand;
+//    this.price = price;
+//    this.discount = discount;
+//    this.getPriceWithDiscount = function () {
+//        return (this.price * (100 - this.discount)) / 100;
+//    };
+//}
+//const nike = new Product('nike', 100, 15);
+//const puma = new Product('puma', 200, 10);
+//console.log(nike);
+//console.log(puma);
+
+
+function Product(brand, price, discount) {
+    // 1. Создается новый объект
+    // 2. на этот объект устанавливается ссылка this
+    // 3. возвращается этот объект
+    this.brand = brand;
+    this.price = price;
+    this.discount = discount;
+}
+Product.prototype.getPriceWithDiscount = function () {
+    return (this.price * (100 - this.discount)) / 100;
+};
+
+
+const nike = new Product('nike', 100, 15);
+const puma = new Product('puma', 200, 10);
+//console.log(nike);
+//console.log(puma);
+
+
+// Наследование в ES5
+const protoForObj = {
+    sayHello () {
+        return 'hi';
+    }
+}
+
+const obj = Object.create(nike);
+//console.log(obj);
+
+const obj2 = Object.create(protoForObj, {
+    firstName: {
+        value: 'test',
+    }
+});
+//console.log(obj2);
+
+
+function User(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+}
+User.prototype.getFullName = function () {
+    return `${this.firstName} ${this.lastName}`;
+};
+User.prototype.sayHello = function () {
+    return `Hello ${this.firstName} ${this.lastName}`;
+};
+const user = new User('ivan', 'ivanov');
+
+
+function Customer(firstName, lastName, membership) {
+    User.call(this, firstName, lastName); // вот это фактически функциональное наследование
+                                            // когда внутри функции дочернего класса вызываем родительский класс с
+                                            // использованием метода call или apply, передавая ему в качестве контекста
+                                            // вызова this. и получим все методы и свойства которые объявлены именно внутри
+                                            // класса родителя. в данном случае User
+    //User.apply(this, arguments);
+
+    this.membership = membership;
+}
+
+// После этого чтобы сделать прототипное наследование
+Customer.prototype = Object.create(User.prototype);
+// так как мы перезаписали прототип, то теряется ссылка на саму функцию. необходимо ее вернуть
+Customer.prototype.constructor = Customer;
+// после этого можно создавать собственные методы в прототипе нашего дочернего класса
+Customer.prototype.getMembership = function () {
+    return this.membership.toUpperCase();
+}
+
+const customer = new Customer('test', 'test', 'basic');
+console.log(customer.sayHello()); // выдаст ошибку что функция не найдена;
+// для того чтобы функции наследовались необходимо после объявления функции Customer относледоваться
+// Customer.prototype = Object.create(User.prototype); и тогда все сработает
+// но тогда пропадет конструктор. для того чтобы конструктор тоже остался необходимо:
+// Customer.prototype.constructor = Customer;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
