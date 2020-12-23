@@ -2,43 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c82b3aae-97be-4ae0-adaa-9a95f306f800" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Acourse/aviaTickets/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Acourse/aviaTickets/src/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Acourse/aviaTickets/src/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Acourse/aviaTickets/src/js/config/apiConfig.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Acourse/aviaTickets/src/js/services/apiService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Acourse/aviaTickets/src/js/store/locations.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Acourse/aviaTickets/webpack.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Acourse/oop/classes.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Acourse/oop/prototype.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Acourse/promises/asyncAwait.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Acourse/webpack/incapsul.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Acourse/webpack/src/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Acourse/webpack/src/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Acourse/webpack/src/js/module1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Acourse/webpack/src/js/module2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Acourse/webpack/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/!course/ajax/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/ajax/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/!course/ajax/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/ajax/error.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/!course/ajax/hw.html" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/ajax/hw.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/!course/ajax/hw.js" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/ajax/hw.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/!course/ajax/hwPost.html" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/ajax/hwPost.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/!course/ajax/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/ajax/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/!course/callback.html" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/abeginer/callback.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/!course/dest.html" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/abeginer/dest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/!course/dom.html" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/abeginer/dom.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/!course/dz.html" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/abeginer/dz.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/!course/dz2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/abeginer/dz2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/!course/function.html" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/abeginer/function.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/!course/newsApi/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/newsApi/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/!course/newsApi/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/newsApi/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/!course/newsApi/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/newsApi/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/!course/promises/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/promises/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/!course/promises/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/promises/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/!course/this.html" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/abeginer/this.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/!course/while.html" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/abeginer/while.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/!course/zam.html" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/abeginer/zam.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Acourse/aviaTickets/src/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Acourse/aviaTickets/src/js/plugins/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Acourse/aviaTickets/src/js/plugins/materialize.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Acourse/aviaTickets/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/aviaTickets/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Acourse/aviaTickets/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/aviaTickets/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Acourse/aviaTickets/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/aviaTickets/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Acourse/aviaTickets/src/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/aviaTickets/src/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Acourse/aviaTickets/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/aviaTickets/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Vue Single File Component" />
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -115,7 +87,7 @@
       <workItem from="1608541580266" duration="21114000" />
       <workItem from="1608624466484" duration="5852000" />
       <workItem from="1608642519375" duration="1270000" />
-      <workItem from="1608707870225" duration="23031000" />
+      <workItem from="1608707870225" duration="27562000" />
     </task>
     <servers />
   </component>
