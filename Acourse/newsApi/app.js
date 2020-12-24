@@ -60,12 +60,13 @@ const http = MyHttp();
 const newsService = (function () {
     // 'https://newsapi.org/v2/top-headlines?country=us&apiKey=77dbc7671399438a9e3d5542d4340dd6'
     const apiKey = '77dbc7671399438a9e3d5542d4340dd6';
+    const token = '77dbc7671399438a9e3d5542d4340dd6'
     const apiUrl = 'https://newsapi.org/v2';
     const urlUrl = 'https://jsonplaceholder.typicode.com'
 
     return {
         topHeadlines(type = 'posts', cb) {
-            let url = `${urlUrl}/${type}`;
+            let url = `${apiUrl}/${type}&apiKey=${token}`;
             http.get(url, cb);
         },
     }

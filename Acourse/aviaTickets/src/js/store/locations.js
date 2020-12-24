@@ -13,11 +13,20 @@ class Locations {
         ]);
 
         const [countries, cities] = response;
-        this.countries = countries;
+        this.countries = this.serializeCountries(countries);
         this.cities = cities;
 
         return response;
     }
+
+    serializeCountries(countries) {
+        // { 'Country code': {...} }
+        return countries.reduce((acc, country) => {
+            acc[country.code] = country;
+            return acc;
+        }, {})
+    }
+
     getCitiesByCountryCode(code) {
         return this.cities.filter(city => city.country_code === code);
     }
@@ -25,3 +34,7 @@ class Locations {
 
 const locations = new Locations(api);
 export default locations;
+
+// {'City, Country': null } в таком формате данные принимает autocomplete
+// [{}, {}] получаем данные в виде
+// {'City': {} } => cities[code]

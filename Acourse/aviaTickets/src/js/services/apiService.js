@@ -9,11 +9,12 @@ import config from '../config/apiConfig';
 class Api {
     constructor(config) {
         this.url = config.url;
+        this.token = config.token;
     }
 
     async countries() {
         try {
-            const response = await axios.get(`${ this.url }/countries`);
+            const response = await axios.get(`${ this.url }/countries&token=${this.token}`);
             return response.data;
         } catch (err) {
             return Promise.reject(err);
@@ -21,7 +22,7 @@ class Api {
     }
     async cities() {
         try {
-            const response = await axios.get(`${ this.url }/cities`);
+            const response = await axios.get(`${ this.url }/cities&token=${this.token}`);
             //console.log(response);
             return response.data;
         } catch (err) {

@@ -17,6 +17,7 @@
                     <li>
                         <div class="input-field currency-select col s12">
                             <select>
+                                <option value="RUB">Рубли</option>
                                 <option value="USD">US Dollar</option>
                                 <option value="EUR">Euro</option>
                             </select>
@@ -35,12 +36,36 @@
                         <form>
                             <div class="card-content">
                                 <span class="card-title"> Card title</span>
+                                <div class="input-field">
+                                    <input type="text" id="autocomplete-origin" class="autocomplete">
+                                    <label for="autocomplete-origin">Origin</label>
+                                </div>
+                                <div class="input-field">
+                                    <input type="text" id="autocomplete-destination" class="autocomplete">
+                                    <label for="autocomplete-destination">Destination</label>
+                                </div>
+
+                                <div class="input-field">
+                                    <input type="text" class="datepicker" id="datepicker-depart">
+                                    <label for="datepicker-depart">Depart date</label>
+                                </div>
+
+                                <div class="input-field">
+                                    <input type="text" class="datepicker" id="datepicker-return">
+                                    <label for="datepicker-return">Return date</label>
+                                </div>
                             </div>
-                            <div class="card-action">
+
+                            <div class="card-action d-flex">
+                                <button class="btn waves-effect waves-light blue darken-3" type="submit" name="action">Search
+                                    <i class="material-icons right">send</i>
+                                </button>
+
+                                <button class="btn waves-effect waves-light blue darken-3 ml-auto" type="reset" name="action">Reset
+                                    <i class="material-icons right">cancel</i>
+                                </button>
 
                             </div>
-
-
                         </form>
                     </div>
                 </div>
