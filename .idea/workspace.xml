@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c82b3aae-97be-4ae0-adaa-9a95f306f800" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Acourse/aviaTickets/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/aviaTickets/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Acourse/aviaTickets/src/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/aviaTickets/src/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Acourse/aviaTickets/src/js/config/apiConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/aviaTickets/src/js/config/apiConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Acourse/aviaTickets/src/js/plugins/materialize.js" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/aviaTickets/src/js/plugins/materialize.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Acourse/aviaTickets/src/js/services/apiService.js" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/aviaTickets/src/js/services/apiService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Acourse/aviaTickets/src/js/store/locations.js" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/aviaTickets/src/js/store/locations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Acourse/newsApi/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/newsApi/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Acourse/vue/budget-app/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/vue/budget-app/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Acourse/vue/budget-app/src/components/BudgetList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/vue/budget-app/src/components/BudgetList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Acourse/vue/budget-app/src/plugins/elements/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Acourse/vue/budget-app/src/plugins/elements/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,10 +15,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Vue Single File Component" />
         <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -41,7 +37,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../wfm_front/wfm-frontend/package.json" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../wfm_front/wfm-frontend" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -87,7 +83,7 @@
       <workItem from="1608624466484" duration="5852000" />
       <workItem from="1608642519375" duration="1270000" />
       <workItem from="1608707870225" duration="27900000" />
-      <workItem from="1608794723421" duration="5925000" />
+      <workItem from="1608794723421" duration="23745000" />
     </task>
     <servers />
   </component>
