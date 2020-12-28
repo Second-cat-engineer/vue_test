@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <PosterBg :poster="posterBg"/>
+    <PosterBg :poster="posterBg" />
     <MoviesList :list="moviesList" @changePoster="onChangePoster" />
     <div>
       <b-button>Button</b-button>
