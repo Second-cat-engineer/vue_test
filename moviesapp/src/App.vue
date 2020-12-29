@@ -1,13 +1,16 @@
 <template>
   <div id="app">
+    <Loader />
+    <notification />
     <PosterBg :poster="posterBg" />
+    <Header />
     <MoviesList :list="moviesList" @changePoster="onChangePoster" />
-    <div>
-      <b-button>Button</b-button>
-      <b-button variant="danger">Button</b-button>
-      <b-button variant="success">Button</b-button>
-      <b-button variant="outline-primary">Button</b-button>
-    </div>
+    <MoviesPagination
+      :current-page="currentPage"
+      :per-page="moviesPerPage"
+      :total="moviesLength"
+      @pageChange="onPageChanged"
+    />
   </div>
 </template>
 
@@ -15,6 +18,10 @@
 import { mapActions, mapGetters } from "vuex";
 import MoviesList from "@/components/MoviesList";
 import PosterBg from "@/components/PosterBg";
+import MoviesPagination from "@/components/MoviesPagination";
+import Loader from "@/components/Loader";
+import Header from "@/components/Header";
+import Notification from "@/components/Notification";
 
 export default {
   name: "App",
@@ -25,17 +32,40 @@ export default {
   },
   components: {
     MoviesList,
-    PosterBg
+    PosterBg,
+    MoviesPagination,
+    Loader,
+    Header,
+    Notification
   },
   computed: {
-    ...mapGetters("moviesStore", ["moviesList"])
+    ...mapGetters("moviesStore", ["moviesList", "currentPage", "moviesPerPage", "moviesLength"])
+  },
+  watch: {
+    "$route.query": {
+      handler: "onPageQueryChange",
+      immediate: true,
+      deep: true
+    }
   },
   methods: {
-    ...mapActions("moviesStore", ["fetchMovies"]),
+    ...mapActions("moviesStore", ["changeCurrentPage"]),
+    onPageQueryChange({ page = 1 }) {
+      this.changeCurrentPage(Number(page));
+    },
     onChangePoster(poster) {
       this.posterBg = poster;
+    },
+    onPageChanged(page) {
+      this.$router.push({ query: { page } });
+      // this.changeCurrentPage(page);
     }
   }
+  // created() {
+  //   if (this.$route.query.page) {
+  //     this.changeCurrentPage(Number(this.$route.query.page));
+  //   }
+  // }
 };
 </script>
 

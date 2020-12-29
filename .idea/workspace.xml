@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c82b3aae-97be-4ae0-adaa-9a95f306f800" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/moviesapp/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/moviesapp/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moviesapp/src/components/MoviesList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/moviesapp/src/components/MoviesList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moviesapp/src/store/mutations.js" beforeDir="false" afterPath="$PROJECT_DIR$/moviesapp/src/store/mutations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +86,8 @@
       <workItem from="1608707870225" duration="27900000" />
       <workItem from="1608794723421" duration="23815000" />
       <workItem from="1608880630571" duration="19183000" />
-      <workItem from="1609140526660" duration="18399000" />
+      <workItem from="1609140526660" duration="18586000" />
+      <workItem from="1609227205166" duration="353000" />
     </task>
     <servers />
   </component>
