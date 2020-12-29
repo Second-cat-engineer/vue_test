@@ -36,12 +36,6 @@ const moviesStore = {
     }
   },
   actions: {
-    initMoviesStore: {
-      handler({ dispatch }) {
-        dispatch("fetchMovies");
-      },
-      root: true
-    },
     async fetchMovies({ getters, commit, dispatch }) {
       try {
         dispatch("toggleLoader", true, { root: true });
@@ -84,7 +78,9 @@ const moviesStore = {
         const movies = serializeResponse(response.Search);
         commit(MOVIES, movies);
       } catch (err) {
-        dispatch("showNotify", {
+        dispatch(
+          "showNotify",
+          {
             msg: err.message,
             title: "Error",
             variant: "danger"

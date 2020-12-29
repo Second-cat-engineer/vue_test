@@ -39,7 +39,12 @@ export default {
     Notification
   },
   computed: {
-    ...mapGetters("moviesStore", ["moviesList", "currentPage", "moviesPerPage", "moviesLength"])
+    ...mapGetters("moviesStore", [
+      "moviesList",
+      "currentPage",
+      "moviesPerPage",
+      "moviesLength"
+    ])
   },
   watch: {
     "$route.query": {
@@ -75,5 +80,8 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 </style>

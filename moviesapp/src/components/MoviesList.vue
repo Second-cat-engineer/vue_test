@@ -9,6 +9,7 @@
               :movie="movie"
               @mouseover.native="onMouseOver(movie.Poster)"
               @removeItem="onRemoveItem"
+              @showModal="onShowMovieInfo"
             />
           </BCol>
         </template>
@@ -16,6 +17,18 @@
           <div>Empty list</div>
         </template>
       </BRow>
+
+      <BModal
+        ref="bv-modal-example"
+        size="xl"
+        hide-footer
+        hide-header
+      >
+        <MovieInfoModalContent
+          :movie="selectedMovie"
+          @closeModal="onCloseModal"
+        />
+      </BModal>
     </BContainer>
   </div>
 </template>
@@ -23,17 +36,24 @@
 <script>
 import { mapGetters, mapActions } from "vuex";
 import MovieItem from "@/components/MovieItem";
+import MovieInfoModalContent from "@/components/MovieInfoModalContent";
 
 export default {
   name: "MoviesList",
   components: {
-    MovieItem
+    MovieItem,
+    MovieInfoModalContent
   },
   props: {
     list: {
       type: Object,
       default: () => ({})
     }
+  },
+  data() {
+    return {
+      selectedMovieID: ""
+    };
   },
   computed: {
     ...mapGetters("moviesStore", ["isSearch"]),
@@ -42,6 +62,9 @@ export default {
     },
     listTitle() {
       return this.isSearch ? "Search result" : "IMDB Top 250";
+    },
+    selectedMovie() {
+      return this.selectedMovieID ? this.list[this.selectedMovieID] : null;
     }
   },
   methods: {
@@ -51,7 +74,9 @@ export default {
       this.$emit("changePoster", poster);
     },
     async onRemoveItem({ id, title }) {
-      const isConfirmed = await this.$bvModal.msgBoxConfirm(`Are you sure delete ${title}?`);
+      const isConfirmed = await this.$bvModal.msgBoxConfirm(
+        `Are you sure delete ${title}?`
+      );
       if (isConfirmed) {
         this.removeMovie(id);
         this.showNotify({
@@ -60,6 +85,16 @@ export default {
           title: "Success"
         });
       }
+    },
+    onShowMovieInfo(id) {
+      this.selectedMovieID = id;
+      this.$refs["bv-modal-example"].show();
+    },
+    onCloseModal() {
+      this.selectedMovieID = null;
+      // this.$bvModal.hide(this.movieInfoModalID);
+      // this.$bvModal.hide("bv-modal-example");
+      this.$refs["bv-modal-example"].hide();
     }
   }
 };
